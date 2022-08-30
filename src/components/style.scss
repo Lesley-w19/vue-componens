@@ -1,0 +1,87 @@
+$color-orange: #ff9900;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header-wrapper {
+  padding: 10px 20px;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+.component-wrapper {
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  padding: 10px 50px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.btn-color {
+  color: #fff;
+  background-color: $color-orange;
+  border: $color-orange;
+}
+.intro-wrapper {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 60px;
+  background: linear-gradient(
+      to bottom right,
+      rgba(9, 8, 8, 0.55),
+      rgba(17, 22, 36, 0.504)
+    ),
+    url("https://images.pexels.com/photos/13162215/pexels-photo-13162215.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+      no-repeat bottom;
+  background-size: cover;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.intro-wrapper h3 {
+  width: 80%;
+  margin: 10px auto;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+.header-title {
+  margin-bottom: 20px;
+  text-align: center;
+  color: darkslategrey;
+  letter-spacing: 1px;
+}
+.sub-topics-child {
+  margin: 30px auto;
+  padding: 30px 80px;
+
+  text-align: start;
+  border-radius: 20px;
+}
+.dynamic-components {
+  padding: 20px 40px;
+  text-align: left;
+}
+.btn-about {
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  margin: 20px 5px;
+  background-color: royalblue;
+
+  transition: all 0.4s ease-in-out;
+}
+.btn-about:hover,
+.active-btn {
+  background-color: $color-orange;
+}
+.list-wrapper li{
+    color: #000;
+}
