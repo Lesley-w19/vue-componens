@@ -1,9 +1,9 @@
 <script>
-import ChildVue from "./Child.vue";
-import BlogPage from "./Blog.vue";
-import ContactPage from "./Contact.vue";
-import AboutPage from "./About.vue";
-import HeadingVue from "./Heading.vue";
+import Topics from "./Topics.vue";
+import Form from "./Form.vue";
+import Heading from "./Heading.vue";
+import Slot from "./Slot.vue";
+import SlotChild from "./SlotChild.vue";
 
 export default {
   name: "HomePage",
@@ -20,7 +20,7 @@ export default {
         { name: "A Single Root Element", id: 14 },
         { name: "Single File Components", id: 1 },
       ],
-      selectedComponent: "BlogPage",
+      selectedComponent: "Slot",
       active: false,
     };
   },
@@ -31,18 +31,18 @@ export default {
     },
   },
   components: {
-    ChildVue,
-    BlogPage,
-    ContactPage,
-    AboutPage,
-    HeadingVue,
+    SlotChild,
+    Slot,
+    Form,
+    Topics,
+    Heading,
   },
 };
 </script>
 
 <template>
   <div class="component-wrapper">
-    <HeadingVue v-bind:title="title" />
+    <Heading v-bind:title="title" />
     <div class="intro-wrapper">
       <h3>
         Vue JS is a single-page application framework written in JavaScript
@@ -63,14 +63,14 @@ export default {
     <div class="dynamic-components">
       <!-- <h2>About section</h2> -->
       <button
-        @click="selectedComponent = 'ChildVue'"
+        @click="selectedComponent = 'SlotChild'"
         class="btn btn-about"
         :class="{ active: 'active-btn' }"
       >
         Topics section
       </button>
       <button
-        @click="selectedComponent = 'BlogPage'"
+        @click="selectedComponent = 'Slot'"
         class="btn btn-about"
         :class="{ active: 'active-btn' }"
       >
@@ -78,7 +78,7 @@ export default {
       </button>
       <button
         @click="
-          selectedComponent = 'ContactPage';
+          selectedComponent = 'Form';
           active = true;
         "
         class="btn btn-about"
@@ -95,7 +95,7 @@ export default {
     <div class="sub-topics-child">
       <h3>The various sub-topics covered on VueJs Components include:</h3>
       <div class="sub-topics">
-        <ChildVue
+        <SlotChild
           v-for="(topic, index) in subTopics"
           :key="topic.id"
           :index="index"
@@ -109,6 +109,6 @@ export default {
   </div>
 </template>
 
-<style lang="sass">
-@import "./style.scss"
+<style lang="scss">
+@import "../assets/style.scss";
 </style>

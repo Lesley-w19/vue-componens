@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "AboutComponent",
+  name: "SlotChildComponent",
   props: ["topicsArray", "index"],
 };
 </script>
@@ -21,5 +21,5 @@ export default {
 </template>
 
 <style lang="scss">
-@import "./style.scss";
+@import "../assets/style.scss";
 </style>

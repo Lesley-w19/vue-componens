@@ -2,7 +2,7 @@
 import HeadingVue from "./Heading.vue";
 
 export default {
-  name: "AboutPage",
+  name: "TopicsSection",
   components: {
     HeadingVue,
   },
@@ -11,13 +11,10 @@ export default {
 
 <template>
   <div class="about-container">
-    <HeadingVue title="About Page" />
+    <HeadingVue title="Topics" />
   </div>
 </template>
 
-<style lang="css">
-.about-container {
-  padding: 40px 30px;
-  text-align: center;
-}
+<style lang="scss">
+@import "../assets/style.scss";
 </style>

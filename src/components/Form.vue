@@ -1,7 +1,8 @@
 <script>
 import HeadingVue from "./Heading.vue";
+import FormChild from "./FormChild.vue";
 export default {
-  name: "ContactPage",
+  name: "FormSection",
   data() {
     return {
       form: {
@@ -9,6 +10,7 @@ export default {
         comments: "",
       },
       link: "https://images.pexels.com/photos/11035366/pexels-photo-11035366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      profession: "",
     };
   },
   props: [
@@ -21,10 +23,14 @@ export default {
   ],
   components: {
     HeadingVue,
+    FormChild,
   },
   methods: {
     submit() {
       alert("form submitted");
+    },
+    addChange(pr) {
+      this.profession = pr;
     },
   },
 };
@@ -73,48 +79,25 @@ export default {
             </div>
           </section>
         </div>
+
+        <div class="emit">
+          <h5>Emitting information form file!</h5>
+          <div class="column">
+            <section class="section" id="results">
+              <form-child @addInfo="addChange" />
+              <div class="box">
+                <ul>
+                  <li>Profession: {{ profession }}</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<style lang="css">
-.contact-container {
-  padding: 40px 30px;
-
-  text-align: center;
-}
-ul {
-  list-style: none;
-  margin-top: 20px;
-}
-input {
-  margin: 5px auto;
-  padding: 10px 20px;
-}
-li {
-  margin-bottom: 20px;
-  text-transform: capitalize;
-}
-.contact-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-img {
-  width: 400px;
-  height: 400px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.4s ease-in-out;
-}
-img:hover {
-  box-shadow: 10px 10px 10px rgba(223, 14, 14, 0.679);
-}
-.form-info {
-  text-align: start;
-}
-.form-info h2 {
-  margin-bottom: 20px;
-}
+<style lang="scss">
+@import "../assets/style.scss";
 </style>
