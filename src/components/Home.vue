@@ -92,13 +92,15 @@ export default {
 
     <div class="sub-topics-child">
       <h3>The various sub-topics covered on VueJs Components include:</h3>
-
-      <ChildVue
+<div class="sub-topics">
+  <ChildVue
         v-for="(topic, index) in subTopics"
         :key="topic.id"
         :index="index"
         :topicsArray="subTopics.map((tp) => tp.name)"
       />
+</div>
+      
     </div>
   </div>
 </template>

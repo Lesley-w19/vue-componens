@@ -59,11 +59,16 @@ a {
   letter-spacing: 1px;
 }
 .sub-topics-child {
-  margin: 30px auto;
+  margin: 20px auto;
   padding: 30px 80px;
 
   text-align: start;
   border-radius: 20px;
+}
+.sub-topics {
+  margin: 30px auto 30px auto;
+  padding: 20px auto;
+  background-color: rgba(131, 117, 117, 0.37);
 }
 .dynamic-components {
   padding: 20px 40px;
@@ -81,6 +86,9 @@ a {
 .btn-about:hover,
 .active-btn {
   background-color: $color-orange;
+}
+.about-wrapper {
+  padding: 3px 30px;
 }
 .list-wrapper li {
   color: #000;

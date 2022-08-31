@@ -1,7 +1,7 @@
 <script>
 export default {
   name: "AboutComponent",
-  props: ["topics-array", "index"],
+  props: ["topicsArray", "index"],
 };
 </script>
 
@@ -10,8 +10,8 @@ export default {
     <div class="list-wrapper">
       <ul>
         <!-- <li>Sub topic name: {{ topics-array[index] }}</li> -->
-        <li>{{ topics - array[index] }}</li>
-        <li>new things</li>
+        <li>{{ topicsArray[index] }}</li>
+        <!-- <li>new things</li> -->
       </ul>
       <!-- <div>Index: {{ key }}</div> -->
       <!-- <div>Topics: {{ topics-array }}</div> -->
