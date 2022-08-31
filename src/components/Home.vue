@@ -72,7 +72,7 @@ export default {
         class="btn btn-about"
         :class="{ active: 'active-btn' }"
       >
-        Blog section
+        Slot section
       </button>
       <button
         @click="
@@ -92,15 +92,14 @@ export default {
 
     <div class="sub-topics-child">
       <h3>The various sub-topics covered on VueJs Components include:</h3>
-<div class="sub-topics">
-  <ChildVue
-        v-for="(topic, index) in subTopics"
-        :key="topic.id"
-        :index="index"
-        :topicsArray="subTopics.map((tp) => tp.name)"
-      />
-</div>
-      
+      <div class="sub-topics">
+        <ChildVue
+          v-for="(topic, index) in subTopics"
+          :key="topic.id"
+          :index="index"
+          :topicsArray="subTopics.map((tp) => tp.name)"
+        />
+      </div>
     </div>
   </div>
 </template>

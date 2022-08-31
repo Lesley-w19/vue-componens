@@ -6,6 +6,7 @@ export default {
 </script>
 
 <template>
+
   <div class="about-wrapper">
     <div class="list-wrapper">
       <ul>
