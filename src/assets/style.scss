@@ -1,0 +1,137 @@
+$color-orange: #ff9900;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+.component-wrapper {
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+
+  .header-wrapper {
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+  .intro-wrapper {
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 60px;
+    background: linear-gradient(
+        to bottom right,
+        rgba(9, 8, 8, 0.55),
+        rgba(17, 22, 36, 0.504)
+      ),
+      url("https://images.pexels.com/photos/13162215/pexels-photo-13162215.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+        no-repeat bottom;
+    background-size: cover;
+    color: #fff;
+    margin-bottom: 40px;
+    h3 {
+      width: 80%;
+      margin: 10px auto;
+      margin-bottom: 50px;
+      letter-spacing: 1px;
+    }
+  }
+  .header-title {
+    margin-bottom: 20px;
+    text-align: center;
+    color: darkslategrey;
+    letter-spacing: 1px;
+  }
+  .sub-topics-child {
+    margin: 20px auto;
+    padding: 30px 80px;
+
+    text-align: start;
+    border-radius: 20px;
+  }
+  .sub-topics {
+    margin: 30px auto 30px auto;
+    padding: 20px auto;
+    background-color: rgba(131, 117, 117, 0.37);
+  }
+  .dynamic-components {
+    padding: 20px 40px;
+    text-align: left;
+  }
+  @mixin btn($background, $border) {
+    color: #fff;
+    border: $border;
+    font-weight: 700;
+    margin: 20px 5px;
+    background-color: $background;
+    transition: all 0.4s ease-in-out;
+    padding: 10px 50px;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  .btn-about {
+    @include btn(royalblue, none);
+  }
+  .btn-color {
+    @include btn($color-orange, $color-orange);
+  }
+  .btn-about:hover,
+  .active-btn {
+    background-color: $color-orange;
+  }
+  .about-wrapper {
+    padding: 3px 30px;
+  }
+  .list-wrapper {
+    li {
+      color: #000;
+    }
+  }
+
+  .contact-container {
+    padding: 40px 30px;
+    text-align: center;
+    ul {
+      list-style: none;
+      margin-top: 20px;
+      li {
+        margin-bottom: 20px;
+        text-transform: capitalize;
+      }
+    }
+    input {
+      margin: 5px auto;
+      padding: 10px 20px;
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    img {
+      width: 400px;
+      height: 400px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+    }
+    img:hover {
+      box-shadow: 10px 10px 10px rgba(223, 14, 14, 0.679);
+    }
+    .form-info {
+      text-align: start;
+      h2 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
