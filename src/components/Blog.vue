@@ -40,6 +40,7 @@ export default {
   margin: 50px;
   padding: 10px;
   background-color: red;
+  border: none;
   text-align: center;
   cursor: pointer;
 }
@@ -49,6 +50,8 @@ export default {
   margin: 50px;
   padding: 10px;
   background-color: Green;
+  border: none;
+
   text-align: center;
   cursor: pointer;
 }
@@ -58,7 +61,16 @@ export default {
   margin: 50px;
   padding: 10px;
   background-color: blue;
+  border: none;
   text-align: center;
   cursor: pointer;
+}
+button {
+  transition: all 0.4s ease-in-out;
+}
+button:hover {
+  color: #fff;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.221);
+  border-radius: 10px;
 }
 </style>
