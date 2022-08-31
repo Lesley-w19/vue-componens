@@ -22,6 +22,11 @@ export default {
   components: {
     HeadingVue,
   },
+  methods: {
+    submit() {
+      alert("form submitted");
+    },
+  },
 };
 </script>
 
@@ -53,6 +58,7 @@ export default {
                 placeholder="Enter your comments"
               />
             </div>
+            <button class="btn btn-color" v-on:click="submit()">Submit</button>
           </div>
         </section>
         <div class="column">

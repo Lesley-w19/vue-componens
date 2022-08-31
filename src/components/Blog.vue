@@ -7,25 +7,34 @@ export default {
     HeadingVue,
     "button-helper": buttonHelper,
   },
+  methods: {
+    showColor(color) {
+      alert("Button is color: " + color);
+    },
+  },
 };
 </script>
 
 <template>
   <div class="blog-container">
-    <HeadingVue title="Slot implementation" :class="white" />
+    <HeadingVue title="Slot implementation" />
 
     <!-- implementation of slots -->
     <div id="buttons-wrapper">
       <button-helper>
-        <button type="button" class="Red">Red</button>
-        <button type="button" class="Green">Green</button>
-        <button type="button" class="Blue">Blue</button>
+        <button type="button" class="Red" @click="showColor()">Red</button>
+        <button type="button" class="Green" @click="showColor()">
+          Green
+        </button>
+        <button type="button" class="Blue" @click="showColor()">
+          Blue
+        </button>
       </button-helper>
     </div>
   </div>
 </template>
 
-<style lang="css">
+<style lang="css" scoped>
 .blog-container {
   padding: 40px 30px;
 

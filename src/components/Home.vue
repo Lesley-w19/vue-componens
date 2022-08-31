@@ -25,8 +25,10 @@ export default {
     };
   },
   props: {
-    title: String,
-    topics: Array,
+    title: {
+      type: String,
+      required: true,
+    },
   },
   components: {
     ChildVue,
@@ -100,6 +102,9 @@ export default {
           :topicsArray="subTopics.map((tp) => tp.name)"
         />
       </div>
+    </div>
+    <div class="global-button">
+      <button-message />
     </div>
   </div>
 </template>
